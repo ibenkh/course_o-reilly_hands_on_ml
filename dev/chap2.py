@@ -20,8 +20,11 @@ from sklearn.impute import SimpleImputer
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+import os
 
-housing = pd.read_csv('~/Bureau/train_ml/datasets/housing/housing.csv')
+path = os.getcwd()+'/datasets/housing/housing.csv'
+
+housing = pd.read_csv(path)
 
 housing.head()
 
