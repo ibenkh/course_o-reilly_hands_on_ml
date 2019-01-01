@@ -87,7 +87,7 @@ roc_auc_score(y_train_5, y_train_pred)
 
 rfe = RandomForestClassifier(n_estimators=10, random_state=42)
 y_proba_forest = cross_val_predict(rfe, X_train, y_train_5, cv=3, method='predict_proba')
-y_proba_forest
+y_proba_foresty_train_pred
 y_score_forest = y_proba_forest[:, 1]
 roc_auc_score(y_train_5, y_score_forest)
 y_train_pred_forest = cross_val_predict(rfe, X_train, y_train_5, cv=3)
