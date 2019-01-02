@@ -59,7 +59,9 @@ a
 grid.best_estimator_
 
 model = LogisticRegression(random_state=42)
-cvs = cross_val_score(model, X_train, y_train, scoring='accuracy', cv=3, verbose=5, n_jobs=-1)
+cvs = cross_val_score(model, X_train, y_train, scoring='accuracy', cv=2, verbose=5, n_jobs=-1)
 cvs
 y_pred = model.fit(X_train, y_train).predict(X_test)
 accuracy_score(y_test, y_pred)
+model.score(X_train, y_train)
+model.score(X_test, y_test)
